@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuTest">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="about" onAction="#handle" text="About">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="exit" onAction="#handle" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="UP" meta="UP" shift="UP" shortcut="DOWN" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Format">
+               <items>
+                  <Menu mnemonicParsing="false" text="Color">
+                     <items>
+                        <RadioMenuItem fx:id="red" mnemonicParsing="false" onAction="#handle" text="빨강">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="color" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="green" mnemonicParsing="false" onAction="#handle" text="녹색" toggleGroup="$color" />
+                        <RadioMenuItem fx:id="blue" mnemonicParsing="false" onAction="#handle" text="파랑" toggleGroup="$color" />
+                        <RadioMenuItem fx:id="black" mnemonicParsing="false" onAction="#handle" text="검정" toggleGroup="$color" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Font">
+                    <items>
+                        <RadioMenuItem fx:id="arial" mnemonicParsing="false" onAction="#handle" text="Arial">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="font" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="cambria" mnemonicParsing="false" onAction="#handle" text="Cambria" toggleGroup="$font" />
+                        <RadioMenuItem fx:id="corbel" mnemonicParsing="false" onAction="#handle" text="Corbel" toggleGroup="$font" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <CheckMenuItem fx:id="bold" mnemonicParsing="false" onAction="#handle" text="Bold" />
+                        <CheckMenuItem fx:id="italic" mnemonicParsing="false" onAction="#handle" text="Italic" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="testMsg" layoutX="47.0" layoutY="52.0" prefHeight="316.0" prefWidth="515.0" text="String for Test" />
+   </children>
+</Pane>

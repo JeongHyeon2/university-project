@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TextareaTest">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="274.0">
+         <content>
+            <TextArea fx:id="text1" prefHeight="200.0" prefWidth="189.0" text="1. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세무궁화 삼천리 화려 강산대한 사람 대한으로 길이 보전하세" wrapText="true" />
+         </content>
+         <HBox.margin>
+            <Insets bottom="100.0" left="30.0" top="100.0" />
+         </HBox.margin>
+      </ScrollPane>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="186.0">
+         <children>
+            <Button fx:id="copy1" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handle" prefHeight="50.0" prefWidth="100.0" text="COPY&gt;&gt;&gt;">
+               <VBox.margin>
+                  <Insets bottom="100.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="copy2" mnemonicParsing="false" onMouseClicked="#handle" prefHeight="50.0" prefWidth="100.0" text="&lt;&lt;&lt;COPY" />
+         </children>
+      </VBox>
+      <ScrollPane prefHeight="400.0" prefWidth="274.0">
+         <content>
+            <TextArea fx:id="text2" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+         </content>
+         <HBox.margin>
+            <Insets bottom="100.0" right="50.0" top="100.0" />
+         </HBox.margin>
+      </ScrollPane>
+   </children>
+</HBox>

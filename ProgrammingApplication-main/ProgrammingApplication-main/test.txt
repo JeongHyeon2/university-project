@@ -1,0 +1,4 @@
+Triangle  (1, 10, 10, 50.0)
+Triangle  (2, 13, 16, 104.0)
+Circle    (5, 10, 314.0)
+Rectangle (6, 4, 5, 20.0)

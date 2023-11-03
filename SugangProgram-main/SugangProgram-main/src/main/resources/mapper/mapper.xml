@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.Mapper">
+    <resultMap id="lecturesResultSet" type="persistence.dto.LecturesDTO">
+        <result property="lecture_id" column="lecture_id"/>
+        <result property="target_grade" column="target_grade"/>
+        <result property="title" column="title"/>
+        <result property="semester" column="semester"/>
+        <result property="credit" column="credit"/>
+    </resultMap>
+
+    <insert id="insertLectures" >
+        INSERT INTO lectures VALUES(#{lecture_id}, #{target_grade}, #{title}, #{semester}, #{credit})
+    </insert>
+
+    <select id="selectLecturesAll" resultMap="lecturesResultSet">
+        SELECT * FROM lectures
+    </select>
+
+    <select id="selectLecturesByGrade" resultMap="lecturesResultSet">
+        SELECT * FROM lectures WHERE target_grade=#{target_grade}
+    </select>
+
+    <select id="selectLectureById" resultType= "java.lang.String" parameterType="java.lang.String">
+        SELECT * FROM lectures WHERE lecture_id=#{lecture_id}
+    </select>
+
+    <update id="updateLecturesAll">
+        UPDATE lectures SET target_grade=#{target_grade},title=#{title},
+        semester=#{semester},credit=#{credit} WHERE lecture_id=#{lecture_id}
+    </update>
+
+    <update id="updateLecturesTargetGrade">
+        UPDATE lectures SET target_grade=#{target_grade} WHERE lecture_id=#{lecture_id}
+    </update>
+
+    <update id="updateLecturesTitle">
+        UPDATE lectures SET title=#{title} WHERE lecture_id=#{lecture_id}
+    </update>
+
+    <update id="updateLecturesSemester">
+        UPDATE lectures SET semester=#{semester} WHERE lecture_id=#{lecture_id}
+    </update>
+
+    <update id="updateLecturesCredit">
+        UPDATE lectures SET credit=#{credit} WHERE lecture_id=#{lecture_id}
+    </update>
+
+    <delete id="deleteLectures">
+        DELETE FROM lectures WHERE lecture_id=#{lecture_id}
+    </delete>
+
+    <select id="selectOLByGradeAndProfessor" resultType="map">
+        SELECT opened_lectures.* FROM opened_lectures JOIN lectures
+        WHERE opened_lectures.lecture_id=lectures.lecture_id
+        AND lectures.target_grade=#{target_grade}
+        AND opened_lectures.professor_id=#{professor_id}
+    </select>
+
+    <!--    <select id="selectStudentsByProfessor" resultType="map">-->
+    <!--        SELECT DISTINCT students.* FROM students,applied_lectures,opened_lectures-->
+    <!--        WHERE applied_lectures.lecture_id=opened_lectures.lecture_id-->
+    <!--        AND applied_lectures.class_id=opened_lectures.class_id-->
+    <!--        AND applied_lectures.student_id=students.student_id-->
+    <!--        AND opened_lectures.professor_id=#{professor_id}-->
+    <!--        AND opened_lectures.lecture_id=#{lecture_id}-->
+    <!--        AND opened_lectures.class_id=#{class_id} limit #{page}, 2-->
+    <!--    </select>-->
+
+</mapper>

@@ -1,0 +1,4 @@
+Person > Kim Min ge, 010-323-423
+Person > Lee tu, 000-323-123
+Food > ramen book, 5000
+Order > Lee tu, ramen book, 5

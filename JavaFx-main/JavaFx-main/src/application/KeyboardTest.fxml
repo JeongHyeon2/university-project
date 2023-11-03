@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <Label fx:id="red" layoutX="341.0" layoutY="76.0" onKeyPressed="#redrun" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: red;" />
+      <Label fx:id="blue" layoutX="213.0" layoutY="159.0" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: blue;" />
+      <Label fx:id="Position" layoutX="32.0" layoutY="371.0" text="Position" />
+   </children>
+</Pane>

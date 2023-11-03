@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PopUpMenu">
+   <children>
+      <Label fx:id="textMsg" prefHeight="406.0" prefWidth="609.0" text=" Stirng for test">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <RadioMenuItem fx:id="red" mnemonicParsing="false" onAction="#handle" text="빨강">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="color" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="green" mnemonicParsing="false" onAction="#handle" text="초록" toggleGroup="$color" />
+                  <RadioMenuItem fx:id="blue" mnemonicParsing="false" onAction="#handle" text="파랑" toggleGroup="$color" />
+                  <RadioMenuItem fx:id="black" mnemonicParsing="false" onAction="#handle" text="검정" toggleGroup="$color" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <font>
+            <Font size="73.0" />
+         </font>
+      </Label>
+   </children>
+</FlowPane>

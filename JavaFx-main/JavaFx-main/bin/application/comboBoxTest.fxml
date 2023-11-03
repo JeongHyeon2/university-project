@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="120.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ComboBoxTest">
+   <children>
+      <ComboBox layoutX="92.0" layoutY="49.0" onAction="#handle_x1" prefHeight="23.0" prefWidth="80.0" promptText="Select" visibleRowCount="3" fx:id="x1" />
+      <ComboBox fx:id="combobox" layoutX="186.0" layoutY="49.0" onAction="#handle_operator" prefHeight="23.0" prefWidth="80.0" promptText="Select" visibleRowCount="3" />
+      <ComboBox layoutX="282.0" layoutY="49.0" onAction="#handle_x2" prefHeight="23.0" prefWidth="80.0" promptText="Select" visibleRowCount="3" fx:id="x2" />
+      <Label layoutX="373.0" layoutY="39.0" prefHeight="43.0" prefWidth="32.0" text="=" />
+      <Label fx:id="value" layoutX="405.0" layoutY="26.0" prefHeight="69.0" prefWidth="80.0" text="답" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#Clicked4" onMouseDragged="#Dragged4" onMouseMoved="#Moved4" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MouseTest">
+   <children>
+      <TextField fx:id="textfield1" layoutX="62.0" layoutY="46.0" onMouseClicked="#Clicked1" onMouseDragged="#Dragged1" onMouseMoved="#Moved1" prefHeight="95.0" prefWidth="208.0" />
+      <Button fx:id="button" layoutX="121.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#Clicked3" onMouseDragged="#Dragged3" onMouseMoved="#Moved3" prefHeight="110.0" prefWidth="138.0" text="Button" />
+      <TextField fx:id="Pannel" editable="false" layoutX="368.0" layoutY="50.0" onMouseClicked="#Clicked2" onMouseDragged="#Dragged2" onMouseMoved="#Moved2" prefHeight="260.0" prefWidth="154.0" style="-fx-border-color: black;" />
+      <TextField fx:id="label" editable="false" layoutX="83.0" layoutY="341.0" prefHeight="23.0" prefWidth="195.0" text="......" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ImageSaveTest">
+   <children>
+      <Button fx:id="Open" mnemonicParsing="false" onAction="#opne_Clicked" prefHeight="23.0" prefWidth="61.0" text="Open" />
+      <Button fx:id="Save" mnemonicParsing="false" onAction="#save_Clicked" prefHeight="23.0" prefWidth="59.0" text="Save" />
+      <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="477.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</FlowPane>

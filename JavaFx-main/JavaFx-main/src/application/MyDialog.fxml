@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyDialog">
+   <children>
+      <Text layoutX="85.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="find" />
+      <TextField fx:id="text" layoutX="129.0" layoutY="61.0" />
+      <Button fx:id="ok" layoutX="281.0" layoutY="61.0" mnemonicParsing="false" onAction="#handle" text="ok" />
+   </children>
+</Pane>
